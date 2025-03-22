@@ -48,17 +48,17 @@ Response: {
   "studentId": "STUDENT_ID",
   "title": "Complete Assignment",
   "description": "Finish chapter 5 homework.",
-  "dueDate": "2023-12-01T00:00:00.000Z"
+  "dueDate": "current date"
   }
   Response:
   {
   "message": "Task assigned successfully.",
   "task": {
     "_id": "TASK_ID",
-    "studentId": "<STUDENT_ID>",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
+    "dueDate": "current date",
     "status": "pending"
     }
   }
@@ -87,7 +87,7 @@ Response: {
     "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
+    "dueDate": "current date",
     "status": "pending"
     }]
 
@@ -106,6 +106,6 @@ Response: {
         "studentId": "STUDENT_ID",
         "title": "Complete Assignment",
         "description": "Finish chapter 5 homework.",
-        "dueDate": "2023-12-01T00:00:00.000Z",
+        "dueDate": "current date",
         "status": "completed"
       }}
