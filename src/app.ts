@@ -34,7 +34,7 @@ Response: {
 
   Add Student  
 
-  Endpoint : POST /api/admin/students
+  Endpoint : POST /api/admin/students/add
   Purpose : Add a new student to the system.
   Authentication : Requires an admin JWT token in the Authorization header.
   Request Body : {
@@ -56,14 +56,14 @@ Response: {
 
   Assign Task  
 
-    Endpoint : POST /api/admin/tasks
+    Endpoint : POST /api/admin/tasks/add
     Purpose : Assign a task to a specific student.
     Authentication : Requires an admin JWT token in the Authorization header.
     Request Body : {
   "studentId": "STUDENT_ID",
   "title": "Complete Assignment",
   "description": "Finish chapter 5 homework.",
-  "dueDate": "current date"
+  "dueDate": "due date"
   }
   Response:
   {
@@ -73,7 +73,7 @@ Response: {
     "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "current date",
+    "dueDate": "due date",
     "status": "pending"
     }
   }
@@ -102,14 +102,14 @@ Response: {
     "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "current date",
+    "dueDate": "due date",
     "status": "pending"
     }
   ]
 
   Update Task Status  
 
-    Endpoint : PUT /api/student/tasks/:taskId
+    Endpoint : PUT /api/student/tasks/done/:taskId
     Purpose : Update the status of a specific task (e.g., mark as completed).
     Authentication : Requires a student JWT token in the Authorization header.
     Request Body :{
@@ -122,7 +122,7 @@ Response: {
     "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "current date",
+    "dueDate": "due date",
     "status": "completed"
     }
   }
