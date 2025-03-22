@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist", // Output directory for compiled JS files
+    "rootDir": "./src"  // Input directory for TS files
+  },
+  "include": ["src/**/*"], // Include all TS files in the src folder
+  "exclude": ["node_modules"] // Exclude node_modules from compilation
+}
