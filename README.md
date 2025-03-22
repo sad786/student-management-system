@@ -1,6 +1,8 @@
 # student-management-system
 An express.js API project created for learning purpose using Typescript and mongodb cloud database 
 
+Deployed Link: https://student-management-system-production-fc5e.up.railway.app
+
 Welcome to the Student Management System API!
 To access this API efficiently follow these instructions
 
@@ -8,11 +10,11 @@ For Admin Login
 Endpoint is POST request api/admin/login/
 
 Body : {
-  "email": "admin@admin.com",
+  "email": "admin@admin.com",      to login you have to fill admin@admin.com as an email and 'admin' as a password as these are default login details
   "password": "admin"
 }
 Response: {
-  "token": "<JWT_TOKEN>"
+  "token": "JWTTOKEN"
 }
 
   Add Student  
@@ -30,7 +32,7 @@ Response: {
   {
   "message": "Student added successfully.",
   "student": {
-    "_id": "<STUDENT_ID>",
+    "_id": "STUDENT_ID",
     "name": "John Doe",
     "email": "john.doe@example.com",
     "department": "Computer Science"
@@ -43,7 +45,7 @@ Response: {
     Purpose : Assign a task to a specific student.
     Authentication : Requires an admin JWT token in the Authorization header.
     Request Body : {
-  "studentId": "<STUDENT_ID>",
+  "studentId": "STUDENT_ID",
   "title": "Complete Assignment",
   "description": "Finish chapter 5 homework.",
   "dueDate": "2023-12-01T00:00:00.000Z"
@@ -52,7 +54,7 @@ Response: {
   {
   "message": "Task assigned successfully.",
   "task": {
-    "_id": "<TASK_ID>",
+    "_id": "TASK_ID",
     "studentId": "<STUDENT_ID>",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
@@ -71,7 +73,7 @@ Response: {
   "password": "password123"
   }
   Response: {
-  "token": "<JWT_TOKEN>"
+  "token": "JWT_TOKEN"
   }
 
   Get Tasks  
@@ -87,8 +89,7 @@ Response: {
     "description": "Finish chapter 5 homework.",
     "dueDate": "2023-12-01T00:00:00.000Z",
     "status": "pending"
-    }
-  ]
+    }]
 
   Update Task Status  
 
@@ -101,8 +102,8 @@ Response: {
     Reponse:{
   "message": "Task status updated successfully.",
   "task": {
-    "_id": "<TASK_ID>",
-    "studentId": "<STUDENT_ID>",
+    "_id": "TASK_ID",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
     "dueDate": "2023-12-01T00:00:00.000Z",
