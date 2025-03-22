@@ -29,7 +29,7 @@ Body : {
   "password": "admin"
 }
 Response: {
-  "token": "<JWT_TOKEN>"
+  "token": "JWT_TOKEN"
 }
 
   Add Student  
@@ -47,7 +47,7 @@ Response: {
   {
   "message": "Student added successfully.",
   "student": {
-    "_id": "<STUDENT_ID>",
+    "_id": "STUDENT_ID",
     "name": "John Doe",
     "email": "john.doe@example.com",
     "department": "Computer Science"
@@ -60,20 +60,20 @@ Response: {
     Purpose : Assign a task to a specific student.
     Authentication : Requires an admin JWT token in the Authorization header.
     Request Body : {
-  "studentId": "<STUDENT_ID>",
+  "studentId": "STUDENT_ID",
   "title": "Complete Assignment",
   "description": "Finish chapter 5 homework.",
-  "dueDate": "2023-12-01T00:00:00.000Z"
+  "dueDate": "current date"
   }
   Response:
   {
   "message": "Task assigned successfully.",
   "task": {
-    "_id": "<TASK_ID>",
-    "studentId": "<STUDENT_ID>",
+    "_id": "TASK_ID",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
+    "dueDate": "current date",
     "status": "pending"
     }
   }
@@ -88,7 +88,7 @@ Response: {
   "password": "password123"
   }
   Response: {
-  "token": "<JWT_TOKEN>"
+  "token": "JWT_TOKEN"
   }
 
   Get Tasks  
@@ -98,11 +98,11 @@ Response: {
     Authentication : Requires a student JWT token in the Authorization header.
     Response :[
     {
-    "_id": "<TASK_ID>",
-    "studentId": "<STUDENT_ID>",
+    "_id": "TASK_ID",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
+    "dueDate": "current date",
     "status": "pending"
     }
   ]
@@ -118,11 +118,11 @@ Response: {
     Reponse:{
   "message": "Task status updated successfully.",
   "task": {
-    "_id": "<TASK_ID>",
-    "studentId": "<STUDENT_ID>",
+    "_id": "TASK_ID",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
+    "dueDate": "current date",
     "status": "completed"
     }
   }
