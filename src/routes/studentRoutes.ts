@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post('/login', studentLogin);
 router.get('/tasks', authenticateStudent, getTasks);
-router.put('/tasks/:taskId', authenticateStudent, updateTaskStatus);
+router.put('/tasks/done/:taskId', authenticateStudent, updateTaskStatus);
 
 export default router;
