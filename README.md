@@ -83,8 +83,8 @@ Response: {
     Authentication : Requires a student JWT token in the Authorization header.
     Response :[
     {
-    "_id": "<TASK_ID>",
-    "studentId": "<STUDENT_ID>",
+    "_id": "TASK_ID",
+    "studentId": "STUDENT_ID",
     "title": "Complete Assignment",
     "description": "Finish chapter 5 homework.",
     "dueDate": "2023-12-01T00:00:00.000Z",
