@@ -18,6 +18,7 @@ export async function adminLogin (req:Request, res:Response): Promise<any>  {
 
 // Add Student
 export const addStudent = async (req:Request, res:Response) => {
+  try{
   const { name, email, department, password } = req.body;
 
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -25,14 +26,21 @@ export const addStudent = async (req:Request, res:Response) => {
 
   await student.save();
   res.status(201).json({ message: 'Student added successfully.', student });
+  }catch(err){
+    res.status(400).json({message:'Error ->'+err});
+  }
 };
 
 // Assign Task
 export const assignTask = async (req:Request, res:Response) => {
-  const { studentId, title, description, dueDate } = req.body;
+  try{
+    const { studentId, title, description, dueDate } = req.body;
 
-  const task = new Task({ studentId, title, description, dueDate });
-  await task.save();
+    const task = new Task({ studentId, title, description, dueDate });
+    await task.save();
 
-  res.status(201).json({ message: 'Task assigned successfully.', task });
+    res.status(201).json({ message: 'Task assigned successfully.', task });
+  }catch(err){
+    res.status(400).json({message:'Error ->'+err});
+  }
 };
