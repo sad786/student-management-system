@@ -1,7 +1,7 @@
 # student-management-system
 An express.js API project created for learning purpose using Typescript and mongodb cloud database 
 
-Deployed Link: https://student-management-system-production-fc5e.up.railway.app
+Deployed Link: https://student-system-fc5e.up.railway.app/
 
 Welcome to the Student Management System API!
 To access this API efficiently follow these instructions
@@ -100,13 +100,12 @@ Response: {
       "status": "completed"
     }
     Reponse:{
-  "message": "Task status updated successfully.",
-  "task": {
-    "_id": "TASK_ID",
-    "studentId": "STUDENT_ID",
-    "title": "Complete Assignment",
-    "description": "Finish chapter 5 homework.",
-    "dueDate": "2023-12-01T00:00:00.000Z",
-    "status": "completed"
-    }
-  }
+      "message": "Task status updated successfully.",
+      "task": {
+        "_id": "TASK_ID",
+        "studentId": "STUDENT_ID",
+        "title": "Complete Assignment",
+        "description": "Finish chapter 5 homework.",
+        "dueDate": "2023-12-01T00:00:00.000Z",
+        "status": "completed"
+      }}
