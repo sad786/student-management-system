@@ -8,9 +8,9 @@ const router = express.Router();
 router.post('/login', adminLogin);
 
 // Add Student (Protected Route)
-router.post('/students', authenticateAdmin, addStudent);
+router.post('/students/add', authenticateAdmin, addStudent);
 
 // Assign Task (Protected Route)
-router.post('/tasks', authenticateAdmin, assignTask);
+router.post('/tasks/add', authenticateAdmin, assignTask);
 
 export default router;
